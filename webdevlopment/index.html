@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Food Order Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black; /* Change this color for the header background */
+            color: white;
+            padding: 10px 20px; /* You can adjust this for more vertical space */
+            border-radius: 10px;
+            margin: 10px  10px 10px 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 10 px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 80px; /* Increased space between navigation items */
+            margin-left: 80px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold; /* Optional: make text bold for better visibility */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            margin: 10px  10px 10px 10px;
+        }
+
+        .menu-list {
+            list-style-type: none;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                display: block;
+                text-align: center;
+            }
+            
+            nav ul li {
+                display: block;
+                margin-bottom: 10px; /* Maintain space in mobile view */
+                margin-right: 0; /* Remove right margin in mobile view */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('menu')">Menu</a></li>
+            <li><a href="#" onclick="showPage('order')">Order</a></li>
+            <li><a href="#" onclick="showPage('about')">About Us</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="content">
+    <!-- Home Page -->
+    <div id="home" class="page">
+        <h1>Welcome to Our Food Ordering Service</h1>
+        <p>Order your favorite meals online!</p>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page" style="display:none;">
+        <h1>Our Menu</h1>
+        <ul class="menu-list">
+            <li>Pizza - $10.00</li>
+            <li>Burger - $8.00</li>
+            <li>Pasta - $12.00</li>
+            <li>Salad - $7.00</li>
+        </ul>
+    </div>
+
+    <!-- Order Page -->
+    <div id="order" class="page" style="display:none;">
+        <h1>Place Your Order</h1>
+
+        <!-- Order Form -->
+        <form id="orderForm">
+            <label for="item">Select Item:</label><br />
+            <select id="item" name="item" required="">
+                <option value="">--Select an item--</option> 
+                <option value="Pizza">Pizza - $10.00</option> 
+                <option value="Burger">Burger - $8.00</option> 
+                <!-- Add more options as needed -->
+            </select><br /><br />
+
+            <input type="submit" value="Submit Order">
+        </form>
+
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage"></div>
+    </div>
+
+    <!-- About Us Page -->
+    <div id="about" class="page" style="display:none;">
+        <h1>About Us</h1>
+        <p>Your favorite place to order delicious food online!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page" style="display:none;">
+        <h1>Contact Us</h1>
+        <p>Email: info@foodorder.com</p>
+        <p>Phone: +123456789</p>
+
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required><br /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" required></textarea><br /><br />
+
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Food Order Website</p>
+</footer>
+
+<script>
+// Function to show the selected page and hide others
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => {
+        page.style.display = 'none'; // Hide all pages
+    });
+    
+    document.getElementById(pageId).style.display = 'block'; // Show the selected page
+}
+
+// Event listener for order form submission
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+   event.preventDefault(); // Prevent form submission
+
+   const item = document.getElementById("item").value;
+
+   if (item) {
+       document.getElementById("confirmationMessage").innerText = `Your order for ${item} has been placed!`;
+       this.reset(); // Reset form fields
+   } else {
+       alert("Please select an item.");
+   }
+});
+
+// Event listener for contact form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+   event.preventDefault(); // Prevent form submission
+
+   const name = document.getElementById("name").value;
+   const message = document.getElementById("message").value;
+
+   if (name && message) {
+       alert(`Thank you, ${name}! Your message has been sent.`);
+       this.reset(); // Reset form fields
+   } else {
+       alert("Please fill out all fields.");
+   }
+});
+
+// Show the home page by default on load
+showPage('home');
+</script>
+
+</body>
+</html>

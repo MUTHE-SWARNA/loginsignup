@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        header {
+            background-color: black; /* Header background color */
+            color: white;
+            padding: 10px 20px; /* Padding for header */
+            position: fixed; /* Fixed position for header */
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure it stays on top */
+            display: flex; /* Flexbox for layout */
+            align-items: center; 
+            flex-wrap: wrap;/* Center items vertically */
+
+        }
+
+        .logo {
+            height: 50px; /* Set logo height */
+            margin-right: 20px; /* Space between logo and nav items */
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Flexbox for horizontal layout */
+            margin-left: auto; /* Push nav items to the right */
+        }
+
+        nav ul li {
+            margin-right: 80px; /* Space between nav items */
+            margin-left: 80px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold; /* Bold text for better visibility */
+        }
+
+        main {
+            padding-top: 70px; /* Space for fixed header */
+            
+            
+        }
+
+        section {
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Flexbox for centering content */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            padding: 20px;
+            border-bottom: 3px solid black; /* Optional border for separation */
+            background-size: cover; /* Cover background image */
+            color: black; /* Text color for contrast */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color:black;
+            color: white;
+        }
+        .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.image-container {
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.details-container {
+    flex: 50%;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.image-container img {
+    width: 80%; /* Make image responsive */
+    border-radius: 10px; /* Rounded corners */
+    height:50%
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack image and text on smaller screens */
+    }
+
+}
+button {
+    padding: 10px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners for button */
+    border: none; /* Remove border */
+    margin-top: 40px; /* Space above button */
+    margin-left: 10px;
+    width: 200px;
+}
+.contactForm{
+    width:200px;
+
+}
+h1 {
+    font-family: 'Pacifico', cursive; /* Use Pacifico font */
+    color: #333; /* Optional: Change text color */
+    font-size: 3em; /* Optional: Adjust size */
+}
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.pinimg.com/236x/32/3b/fa/323bfab257defbf6c87fd78c8a548996.jpg" alt="Food Logo" class="logo"> <!-- Logo Image -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#order">Cart items</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="content">
+    <!-- Home Section -->
+    <!-- Home Section -->
+        <section id="home" style="background-color: #f9f9f9; padding: 10px;">
+            <div class="home-container" style="display: flex; align-items: center; flex-wrap: wrap;">
+               
+                <div class="details-container" style="flex: 1; padding: 20px; display:flex; flex-direction: column;">
+                    <h1>Welcome to Our Food Ordering Service</h1>
+                    <p>     Your favorite meals are just a click away!</p>
+                    <p>At SWAHI, we believe in delivering delicious, fresh, and high-quality food right to your doorstep. Whether you're craving pizza, burgers, or salads, we have something for everyone!</p>
+                    
+                    <p>Join us today and discover why we are the best choice for your food cravings!</p>
+                    <button onclick="location.href='#menu'" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">View Menu</button>
+                </div>
+                <div class="image-container" style="flex: 1; padding: 10px; justify-content: flex-end; align-items: flex-end; margin-right: 20px;">
+                    <img src="https://i.pinimg.com/564x/a4/c9/52/a4c95232b88bc993609b0d37b4694c5f.jpg" alt="Delicious Food" style="width: 80%; border-radius: 10px;"> <!-- Change 'image1.jpg' to your actual image path -->
+                     <!-- Change 'image2.jpg' to your actual image path -->
+                </div>
+            </div>
+        </section>
+    
+  
+    <!-- Menu Section -->
+   <!-- Menu Section -->
+<!-- Menu Section -->
+<section id="menu" style="background-color: #f9f9f9; padding: 20px;">
+    <h1 style="text-align: center; margin-bottom: 10px; margin-top: 0;">Our Menu</h1> <!-- Centered headline -->
+
+    <div class="card-container" style="display: flex; justify-content: space-around; margin-top: 20px; flex-wrap: wrap;">
+        <!-- Card Example for Pizza -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 300px; height: 300px; text-align: center;"> <!-- Adjusted width and height -->
+            <img src="https://i.pinimg.com/474x/90/b1/fa/90b1fab13b2f7574a9379af23f22d95e.jpg" alt="Pizza" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'pizza.jpg' to your actual image path -->
+            <h2>Pizza</h2>
+            <p>Delicious cheese pizza with fresh toppings.</p>
+            <p><strong>$10.00</strong></p>
+        </div>
+
+        <!-- Card Example for Burger -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 300px; height: 300px; text-align: center;"> <!-- Adjusted width and height -->
+            <img src="https://i.pinimg.com/236x/33/6f/49/336f4969f18cc575675c4f485443c383.jpg" alt="Burger" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'burger.jpg' to your actual image path -->
+            <h2>Burger</h2>
+            <p>Juicy beef burger with lettuce and tomato.</p>
+            <p><strong>$8.00</strong></p>
+        </div>
+
+        <!-- Card Example for Salad -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 10px; width: 300px; height: 300px; text-align: center;"> <!-- Adjusted width and height -->
+            <img src="https://i.pinimg.com/564x/ba/b8/11/bab811321bfd3e92ff455024c3f0f5e4.jpg" alt="Salad" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'salad.jpg' to your actual image path -->
+            <h2>Salad</h2>
+            <p>Fresh garden salad with a variety of vegetables.</p>
+            <p><strong>$7.00</strong></p>
+        </div>
+
+        <!-- Card Example for Pasta -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 300px; height: 300px; text-align: center;"> <!-- Adjusted width and height -->
+            <img src="https://i.pinimg.com/564x/6b/f7/42/6bf742ccd13c694c57d383f4e920aca2.jpg" alt="Pasta" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'pasta.jpg' to your actual image path -->
+            <h2>Pasta</h2>
+            <p>Pasta with creamy Alfredo sauce.</p>
+            <p><strong>$12.00</strong></p>
+        </div>
+    </div>
+</section>
+
+    
+
+  <!-- Place Your Order Section -->
+<section id="order" style="background-color: #f9f9f9; padding: 10px 20px;"> <!-- Reduced top padding -->
+    <h1 style="text-align: center; margin-bottom: 10px; margin-top: 5px;">Place Your Order</h1> <!-- Reduced top margin -->
+
+    <div class="card-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px;">
+        <!-- Card Example for Pizza -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/bb/ba/3d/bbba3dc3914d86b2d82b86c6a3244415.jpg" alt="Pizza" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'pizza.jpg' to your actual image path -->
+            <h2>Biriyani</h2>
+            <p>Delicious Briyani.</p>
+            <p><strong>$10.00</strong></p>
+            <button onclick="addToCart('Pizza')">Add to Cart</button>
+        </div>
+
+        <!-- Card Example for Burger -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/a2/ee/12/a2ee120ac526d968d726b6d4a668e3cf.jpg" alt="Burger" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'burger.jpg' to your actual image path -->
+            <h2>Samosa</h2>
+            <p>Crispy Samosa.</p>
+            <p><strong>$8.00</strong></p>
+            <button onclick="addToCart('Burger')">Add to Cart</button>
+        </div>
+
+        <!-- Card Example for Salad -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/a9/f7/42/a9f74242c99e6c2c0144007c31c9b763.jpg" alt="Salad" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'salad.jpg' to your actual image path -->
+            <h2>France</h2>
+            <p>France curry</p>
+            <p><strong>$7.00</strong></p>
+            <button onclick="addToCart('Salad')">Add to Cart</button>
+        </div>
+
+        <!-- Card Example for Pasta -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/25/bb/6a/25bb6a7c37b422c408ad5bf71d76d5d4.jpg" alt="Pasta" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'pasta.jpg' to your actual image path -->
+            <h2>Fish Curry</h2>
+            <p>Fish creamy Alfredo sauce.</p>
+            <p><strong>$12.00</strong></p>
+            <button onclick="addToCart('Pasta')">Add to Cart</button>
+        </div>
+
+        <!-- Card Example for Tacos -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/1b/28/74/1b28742d168b493d4afd5a4378d2bc31.jpg" alt="Tacos" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'tacos.jpg' to your actual image path -->
+            <h2>Tacos</h2>
+            <p>Spicy chicken tacos .</p>
+            <p><strong>$9.00</strong></p>
+            <button onclick="addToCart('Tacos')">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Message -->
+    <div id="confirmationMessage" style="text-align:center; margin-top:20px;"></div>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        function addToCart(item) {
+            document.getElementById("confirmationMessage").innerText = item + " has been added to your cart!";
+        }
+    </script>
+</section>
+
+    <!-- About Us Section -->
+    <!-- About Us Section -->
+<section id="about" style="background-color: #f9f9f9; padding: 20px;">
+    <h1 style="text-align: center; margin-bottom: 20px; margin-top: 0px;">About Us</h1>
+
+    <div class="card-container" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+        <!-- Card Example for Project 1 -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/22/c4/f5/22c4f5115b7d08821b7e61597a0026ca.jpg" alt="Project 1" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'project1.jpg' to your actual image path -->
+            <h2>OUR BRANCHES</h2>
+            <p>we believe in the power of community and connection. Each of our branches is not just a location; it’s a hub of innovation and service dedicated to bringing you the best of what we offer.</p>
+        </div>
+
+        <!-- Card Example for Project 2 -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/fc/63/0b/fc630bacf658ddc1d942a06c99eec33c.jpg" alt="Project 2" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'project2.jpg' to your actual image path -->
+            <h2>SPECIALS FOR</h2>
+            <p>Biryani is a beloved and aromatic rice dish originating from the Indian subcontinent, known for its rich flavors and fragrant spices</p>
+        </div>
+
+        <!-- Card Example for Project 3 -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/e8/a4/a2/e8a4a2420594569c21e08551210ab22e.jpg" alt="Project 3" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'project3.jpg' to your actual image path -->
+            <h2>HEADCHEF</h2>
+            <p>The role of a Head Chef is crucial in any restaurant, as they are responsible for leading the kitchen and ensuring the quality of the food served.</p>
+        </div>
+
+        <!-- Card Example for Project 4 -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/736x/26/4f/a1/264fa1a7c3d1da549358aa080dd9eed7.jpg" alt="Project 4" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;"> <!-- Change 'project4.jpg' to your actual image path -->
+            <h2>REVIEWS</h2>
+            
+            <p>The restaurant has received rave reviews for its delicious food and exceptional service, making it a favorite among locals. .</p>
+        </div>
+
+        <!-- Card Example for Project 5 -->
+        <div class="card" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 15px; width: 220px; text-align: center;">
+            <img src="https://i.pinimg.com/564x/16/a0/e1/16a0e16b5583959ed041ca1ecae8c422.jpg" alt="Project 5" style="width:100%; height:auto;border-top-left-radius :10px;border-top-right-radius :10px;"> <!-- Change 'project5.jpg' to your actual image path -->
+            <h2>HELPING HAND.</h2>
+            <p>Our mission is to improve lives by providing essential support and raising awareness about social issues affecting marginalized communities.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" style="background-image:url('contact-bg.jpg'); padding: 20px; color: black;">
+    <h1>Contact Us</h1>
+    <p>Email: food@example.com</p>
+    <p>Phone: +123456789</p>
+
+    <!-- Contact Form -->
+    <form id="contactForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required placeholder="Name" style="width: 300px; padding: 10px;"><br /><br />
+
+        <label for="feedback">Feedback:</label><br />
+        <textarea id="feedback" name="feedback" required placeholder="Feedback" style="width: 300px; height: 100px; padding: 10px;"></textarea><br /><br />
+
+        <label for="RateUs">Rate Us:</label><br />
+        <input type="text" id="RateUs" name="RateUs" required placeholder="Rate Us" style="width: 300px; padding: 10px;"><br /><br />            
+
+        <input type="submit" value="Send Message" style="width:150px; padding: 10px">
+    </form>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Food Order Website</p>
+</footer>
+
+<script>
+// Event listener for order form submission
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+   event.preventDefault(); // Prevent form submission
+
+   const item = document.getElementById("item").value;
+
+   if (item) {
+       document.getElementById("confirmationMessage").innerText = `Your order for ${item} has been placed!`;
+       this.reset(); // Reset form fields
+   } else {
+       alert("Please select an item.");
+   }
+});
+
+// Event listener for contact form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+   event.preventDefault(); // Prevent form submission
+
+   const name = document.getElementById("name").value;
+   const message = document.getElementById("message").value;
+
+   if (name && message) {
+       alert(`Thank you, ${name}! Your message has been sent.`);
+       this.reset(); // Reset form fields
+   } else {
+       alert("Please fill out all fields.");
+   }
+});
+</script>
+
+</body>
+</html>

@@ -5,9 +5,11 @@ import LoginSignup from './Components/LoginSignup/LoginSignup.jsx';
 
 function App() {
   return (
+    
     <div >
       <LoginSignup/>
     </div>
+   
   );
 }
 
